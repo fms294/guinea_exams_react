@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Navigation from './NavigationComponent';
 import Footer from './FooterComponent';
+import Program from './ProgramComponent';
 import {Switch, Route, Redirect, withRouter} from 'react-router-dom';
 
 
@@ -9,7 +10,7 @@ class Main extends Component {
         return (
             <div>
                 <Navigation />
-                <h1>Sylla</h1>
+                <Program />
                 <Footer />
             </div>
         );
