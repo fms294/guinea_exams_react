@@ -1,9 +1,9 @@
-import React, { useState , Component} from 'react';
-import { Collapse, Navbar, NavbarToggler, Nav, NavItem, NavLink, 
+import React, { Component} from 'react';
+import { Collapse, Navbar, NavbarToggler, Nav, NavItem, 
     Jumbotron , UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem, Button, 
     Modal, ModalHeader, ModalBody, Form, FormGroup, Input, Label} from 'reactstrap';
 import {FormControl} from 'react-bootstrap';
-
+import { BrowserRouter as Router, Link, NavLink } from "react-router-dom";
 
 
 class Navigation extends Component{
@@ -66,17 +66,18 @@ class Navigation extends Component{
                     </div>       
                 </Jumbotron>
                 <Navbar color="dark" dark expand='md'>
+                    <Router>
                     <div className="container" sticky="top" expand="md">
                         <NavbarToggler onClick={this.toggleNav} />
                         <Collapse isOpen={this.state.isNavOpen} navbar>
                             <Nav className="mr-auto" navbar>
                                 <NavItem>
-                                    <NavLink className="nav-link" to="/program" >
+                                    <NavLink className="nav-link" to="/programs" >
                                        <i className='fa fa-home fa-lg' /> Programs
                                     </NavLink>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink className="nav-link" to="/instructor" >
+                                    <NavLink className="nav-link" to="/instructors" >
                                        <i className='fa fa-user fa-lg' /> Instructors 
                                     </NavLink>
                                 </NavItem>
@@ -85,13 +86,13 @@ class Navigation extends Component{
                                             <i className="fa fa-bars fa-lg" /> More
                                     </DropdownToggle>
                                     <DropdownMenu>
-                                        <DropdownItem>
+                                        <DropdownItem tag={Link} to="/aboutus">
                                             About
                                         </DropdownItem>
-                                        <DropdownItem>
-                                        Blog
+                                        <DropdownItem tag={Link} to="/blog">
+                                             Blog
                                         </DropdownItem>
-                                        <DropdownItem>
+                                        <DropdownItem tag={Link} to="/contactus">
                                             Contact
                                         </DropdownItem>
                                     </DropdownMenu>
@@ -114,6 +115,7 @@ class Navigation extends Component{
                             </span> 
                         </Collapse>
                     </div>
+                    </Router>
                 </Navbar>
                 <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
                     <ModalHeader toggle={this.toggleModal}>Login</ModalHeader>
@@ -171,7 +173,7 @@ class Navigation extends Component{
                                     Remember me
                                 </Label>
                             </FormGroup>
-                            <Button type="submit" value="cancel" color="danger">Cancel</Button> {"   "}
+                            <Button type="submit" value="cancel" color="danger">Cancel</Button> {"  "}
                             <Button type="submit" value="signup" color="success">Sign up</Button>
                         </Form>
                     </ModalBody>

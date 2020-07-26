@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Link } from "react-router-dom";
 
 
 function Footer(props) {
@@ -11,8 +11,8 @@ function Footer(props) {
                     <div className="col-4 col-sm-2 offset-1">
                         <h5>Links</h5>
                         <ul className="list-unstyled">  
-                            <li><Link to='/home'>Programs</Link></li>
-                            <li><Link to='/directory'>Instructors</Link></li>
+                            <li><Link to='/programs'>Programs</Link></li>
+                            <li><Link to='/instructors'>Instructors</Link></li>
                             <li><Link to='/aboutus'>About</Link></li>
                             <li><Link to='/blog'>Blog</Link></li>
                             <li><Link to='/contactus'>Contact</Link></li>
@@ -26,8 +26,8 @@ function Footer(props) {
                         <a className="btn btn-social-icon btn-google" href="http://youtube.com/"><i className="fa fa-youtube" /></a> 
                     </div>
                     <div className="col-sm-4 text-center">
-                        <a role="button" className="btn btn-link" href="tel:+12065551234"><i className="fa fa-phone" /> 1-206-555-1234</a><br />
-                        <a role="button" className="btn btn-link" href="mailto:notreal@notreal.co"><i className="fa fa-envelope-o" /> campsites@nucamp.co</a>
+                        <a role="button" className="btn btn-link" href="tel:+555-555-5555"><i className="fa fa-phone" /> 1-555-555-5555</a><br />
+                        <a role="button" className="btn btn-link" href="mailto:notreal@notreal.co"><i className="fa fa-envelope-o" /> client@guineaexams.com</a>
                     </div>
                 </div>
             </div>

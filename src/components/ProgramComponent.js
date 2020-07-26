@@ -1,10 +1,6 @@
 import React from 'react';
 import {Card, Button, CardImg, CardTitle, CardText, CardGroup, CardBody} from 'reactstrap';
-                                // <NavItem>
-                                //     <NavLink className="nav-link" to="/directory">
-                                //         <i className="fa fa-list fa-lg" /> Directory
-                                //     </NavLink>
-                                // </NavItem>
+
 
 const Program = (props) => {
     return (
